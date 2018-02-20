@@ -9,6 +9,6 @@ namespace PairingBot.Client.Utility
     public interface IFileReadWrite
     {
         string ReadFile();
-        string WriteToFile();
+        void WriteToFile(string todayPairs);
     }
 }

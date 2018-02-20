@@ -13,7 +13,7 @@ namespace PairingBot.Client
 
         public SlackClient(string urlWithAccessToken)
         {
-            _uri = new Uri();
+            _uri = new Uri(urlWithAccessToken);
         }
 
         //Post a message using simple strings

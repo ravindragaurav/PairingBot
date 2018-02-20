@@ -20,8 +20,8 @@ namespace PairingBot.Client
             var pairs = new Pairs(teamMembers);
             var result = pairs.GetPairs();
             client.PostMessage(username: "Gaurav",
-                       text: result,
-        channel: "#cobrapairs");
+                                text: result,
+                                channel: "#cobrapairs");
         }
     }
 }

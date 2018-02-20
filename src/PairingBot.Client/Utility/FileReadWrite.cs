@@ -12,15 +12,20 @@ namespace PairingBot.Client.Utility
         private const string fileLocation = ".\\LastPair.txt";
         public string ReadFile()
         {
-            StreamReader sr = new StreamReader(fileLocation);
-            var line = sr.ReadLine();
-            Console.WriteLine(line);
-            return line;
+            using (StreamReader sr = new StreamReader(fileLocation))
+            {
+                var line = sr.ReadLine();
+                Console.WriteLine(line);
+                return line;
+            }
         }
 
-        public string WriteToFile()
+        public void WriteToFile(string todayPairs)
         {
-            throw new NotImplementedException();
+            using (StreamWriter sw = new StreamWriter(fileLocation))
+            {
+                sw.WriteLine(todayPairs);
+            }
         }
     }
 }
